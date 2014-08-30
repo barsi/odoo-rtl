@@ -12,7 +12,7 @@ the project contains 3 main modules that cover the three main features in odoo t
 
 ## Installation
 #### For Backend UI
-1. download and extract the modules in addons folder.
+1. [download](https://github.com/barsi/odoo-rtl/archive/master.zip) and extract the modules in addons folder.
 2. restart odoo server.
 3. go to settings => update modules list.
 4. go to settings => language and make sure your target language (e.g. arabic) is Right to left direction.
