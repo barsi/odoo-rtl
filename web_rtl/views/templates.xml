@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+        <template id="web_rtl.layout" inherit_id="web.layout" name="RTL Layout">
+            <xpath expr="//html/head/t" position="after">
+                <link t-if="lang_direction == 'rtl'" href="/web_rtl/static/src/css/bootstrap-rtl.min.css" rel="stylesheet"/>
+                <link t-if="lang_direction == 'rtl'" href="/web_rtl/static/src/css/rtl.css" rel="stylesheet"/>
+                
+            </xpath>
+            <xpath expr="//html" position="before">
+                <t t-set="body_classname" t-value="lang_direction"/>
+            </xpath>
+            
+            
+        </template>
+    </data>
+</openerp>
