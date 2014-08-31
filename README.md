@@ -2,8 +2,6 @@
 
 This project developed as a set of modules to provide Right to left support for Odoo (formely known as OpenERP).
 
-**this is for odoo Version 8.0 only** 
-
 the project contains 3 main modules that cover the three main features in odoo that require RTL support:
 
 * the backend module (web module and its descendants).
@@ -11,6 +9,11 @@ the project contains 3 main modules that cover the three main features in odoo t
 * the frontend (website) module and its descendant modules.
 
 ## Installation
+
+## Note on Odoo installation.
+
+*It seems that the direct download of odoo from their website or from nightly build are not the latest built according to issue #odoo/798, until they fix this issue, you have to [download](https://github.com/odoo/odoo/archive/8.0.zip) or  clone directly from github.com/odoo/odoo and switch to branch 8.0 before launch the server, this doc will not cover odoo installation process*
+
 #### For Backend UI
 1. [download](https://github.com/barsi/odoo-rtl/archive/master.zip) and extract the modules in addons folder.
 2. restart odoo server.
@@ -42,6 +45,6 @@ we developed an RTL support for V7.0 reports, go **[to this link.](https://githu
 ### Credits
 Thanks go to Obay Albadri, he started RTL css for Version 7.0, we continue adding above it.
 
-## License
-    This project is licensed under [AGPL v3](http://www.gnu.org/licenses/agpl-3.0.html) (the same as odoo).
+### License
+This project is licensed under [AGPL v3](http://www.gnu.org/licenses/agpl-3.0.html) (the same as odoo).
 
