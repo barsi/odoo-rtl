@@ -160,7 +160,7 @@ class Report(orm.Model):
                 if process.returncode not in [0, 1]:
                     raise osv.except_osv(_(u'Report (PDF)'),
                                          _(u'Wkhtmltopdf failed (error code: %s). '
-                                           u'Message: %s') % (unicode(process.returncode), err))
+                                           u'Message: %s') % (unicode(process.returncode), err.decode('utf-8')))
 
                 # Save the pdf in attachment if marked
                 if reporthtml[0] is not False and save_in_attachment.get(reporthtml[0]):
