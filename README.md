@@ -10,7 +10,7 @@ the project contains 3 main modules that cover the three main features in odoo t
 
 ## Installation
 
-## Note on Odoo installation.
+### Note on Odoo installation.
 
 *It seems that the direct download of odoo from their website or from nightly build are not the latest built for some issues mentioned [here](https://github.com/odoo/odoo/issues/798), until they fix these issues, you have to [download](https://github.com/odoo/odoo/archive/8.0.zip) or  clone directly from github.com/odoo/odoo and switch to branch 8.0 before launch the server, this doc will not cover odoo installation process*
 

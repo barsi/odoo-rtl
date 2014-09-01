@@ -157,9 +157,9 @@ class Report(orm.Model):
                 out, err = process.communicate()
 
                 if process.returncode not in [0, 1]:
-                    raise osv.except_osv(_('Report (PDF)'),
-                                         _('Wkhtmltopdf failed (error code: %s). '
-                                           'Message: %s') % (str(process.returncode), err))
+                    raise osv.except_osv(_(u'Report (PDF)'),
+                                         _(u'Wkhtmltopdf failed (error code: %s). '
+                                           u'Message: %s') % (unicode(process.returncode), err))
 
                 # Save the pdf in attachment if marked
                 if reporthtml[0] is not False and save_in_attachment.get(reporthtml[0]):
@@ -171,8 +171,8 @@ class Report(orm.Model):
                         'res_id': reporthtml[0],
                     }
                     self.pool['ir.attachment'].create(cr, uid, attachment)
-                    _logger.info('The PDF document %s is now saved in the '
-                                 'database' % attachment['name'])
+                    _logger.info(u'The PDF document %s is now saved in the '
+                                 u'database' % attachment['name'])
 
                 pdfreport.seek(0)
                 pdfdocuments.append(pdfreport)
