@@ -20,7 +20,8 @@
 ##############################################################################
 
 
-from openerp.osv import orm
+from openerp.osv import orm, osv
+from openerp.tools.translate import _
 import openerp
 from openerp.http import request
 
