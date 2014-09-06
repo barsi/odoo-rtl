@@ -12,7 +12,7 @@
                 <t t-set="body_classname" t-value="request.context.get('lang_dir', 'ltr')"/>
             </xpath>
             <xpath expr="//html/body" position="attributes">
-                <attribute name="t-att-class">request.context.get('lang_dir', 'ltr') + ' container'</attribute>
+                <attribute name="t-att-class">request.context.get('lang_dir', 'ltr')</attribute>
             </xpath>
             
             
