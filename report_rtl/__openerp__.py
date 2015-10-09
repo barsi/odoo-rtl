@@ -21,9 +21,10 @@
 
 {
     'name': 'Report RTL',
-    'version': '1.0',
+    'version': '1.1',
     'author': 'Mohammed Barsi',
     'sequence': 4,
+    'category': 'Advanced Reporting',
     'summary': 'Report RTL (Right to Left) layout',
     'description':
         """

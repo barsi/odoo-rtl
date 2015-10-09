@@ -22,9 +22,10 @@
 
 {
     'name': 'Web RTL',
-    'version': '1.0',
+    'version': '1.1',
     'author': 'Mohammed Barsi',
     'sequence': 4,
+    'category': 'Usability',
     'summary': 'Web RTL(Right to Left) layout',
     'description':
         """

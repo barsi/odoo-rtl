@@ -9,7 +9,7 @@
                 
             </xpath>
             <xpath expr="//html" position="before">
-                <t t-set="body_classname" t-value="lang_direction"/>
+                <t t-set="body_classname" t-value="lang_direction + ' ' + (body_classname or '')"/>
             </xpath>
             
             

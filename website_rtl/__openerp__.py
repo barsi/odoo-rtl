@@ -25,6 +25,7 @@
     'version': '1.0',
     'author': 'Mohammed Barsi',
     'sequence': 4,
+    'category': 'Website',
     'summary': 'Website RTL(Right to Left) layout',
     'description':
         """

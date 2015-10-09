@@ -1,8 +1,104 @@
+/***************************
+* Cusom Fonts
+* 1. Droid Arabic Kufi, by Google
+* 2. Droid Arabic Naskh, also by Google
+* 3. Beutiful Amiri, Opensource.
+****************************/
+.set-grey{
+  background: #aaa !important;
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/web_rtl/static/src/fonts/DroidKufi-Regular.eot);
+  src: url(/web_rtl/static/src/fonts/DroidKufi-Regular.woff2) format('woff2'),
+       url(/web_rtl/static/src/fonts/DroidKufi-Regular.woff) format('woff'),
+       url(/web_rtl/static/src/fonts/DroidKufi-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/web_rtl/static/src/fonts/DroidKufi-Bold.eot);
+  src: url(/web_rtl/static/src/fonts/DroidKufi-Bold.woff2) format('woff2'),
+       url(/web_rtl/static/src/fonts/DroidKufi-Bold.woff) format('woff'),
+       url(/web_rtl/static/src/fonts/DroidKufi-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Arabic Naskh';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/web_rtl/static/src/fonts/DroidNaskh-Regular.eot);
+  src: url(/web_rtl/static/src/fonts/DroidNaskh-Regular.woff2) format('woff2'),
+       url(/web_rtl/static/src/fonts/DroidNaskh-Regular.woff) format('woff'),
+       url(/web_rtl/static/src/fonts/DroidNaskh-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Arabic Naskh';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/web_rtl/static/src/fonts/DroidNaskh-Bold.eot);
+  src: url(/web_rtl/static/src/fonts/DroidNaskh-Bold.woff2) format('woff2'),
+       url(/web_rtl/static/src/fonts/DroidNaskh-Bold.woff) format('woff'),
+       url(/web_rtl/static/src/fonts/DroidNaskh-Bold.ttf) format('truetype');
+}
+
+/* 
+ * Amiri (Arabic) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Amiri';
+  font-style: italic;
+  font-weight: 400;
+  src: url(/web_rtl/static/src/fonts/Amiri-Slanted.eot);
+  src: url(/web_rtl/static/src/fonts/Amiri-Slanted.woff2) format('woff2'),
+       url(/web_rtl/static/src/fonts/Amiri-Slanted.woff) format('woff'),
+       url(/web_rtl/static/src/fonts/Amiri-Slanted.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/web_rtl/static/src/fonts/Amiri-Regular.eot);
+  src: url(/web_rtl/static/src/fonts/Amiri-Regular.woff2) format('woff2'),
+       url(/web_rtl/static/src/fonts/Amiri-Regular.woff) format('woff'),
+       url(/web_rtl/static/src/fonts/Amiri-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Amiri';
+  font-style: italic;
+  font-weight: 700;
+  src: url(/web_rtl/static/src/fonts/Amiri-BoldSlanted.eot);
+  src: url(/web_rtl/static/src/fonts/Amiri-BoldSlanted.woff2) format('woff2'),
+       url(/web_rtl/static/src/fonts/Amiri-BoldSlanted.woff) format('woff'),
+       url(/web_rtl/static/src/fonts/Amiri-BoldSlanted.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Amiri';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/web_rtl/static/src/fonts/Amiri-Bold.eot);
+  src: url(/web_rtl/static/src/fonts/Amiri-Bold.woff2) format('woff2'),
+       url(/web_rtl/static/src/fonts/Amiri-Bold.woff) format('woff'),
+       url(/web_rtl/static/src/fonts/Amiri-Bold.ttf) format('truetype');
+}
+
 .rtl{direction:rtl}
-/***************
-* part of this css started
-* By ZEC-CS, 2013 on version 7.0
-**************/
+.rtl *:not(.glyphicon){font-family: 'Droid Arabic Naskh', serif;}
+
+/*
+* reset switch manager fonts
+*/
+.rtl .oe_e, .rtl .oe_e a  {
+font-family: "entypoRegular" !important;
+}
+
+
+.rtl .oe_kanban_action_button{
+  line-height: 5px;
+}
 .rtl .openerp .oe_left {float: right;margin:0px 0px 0px 8px}
 .rtl .openerp th, .rtl .openerp td {text-align: right;}
 .rtl .openerp .oe_leftbar {
@@ -31,6 +127,27 @@ padding: 0px 2px;
 .rtl .openerp .oe_form_field_many2one .oe_m2o_cm_button {
     float: left;
 }
+.rtl .openerp .oe_form input[type="text"], .rtl .openerp .oe_form input[type="password"], .rtl .openerp .oe_form input[type="file"], .rtl .openerp .oe_form select, .rtl .openerp .oe_form textarea{
+    font-family: 'Droid Arabic Naskh', serif;
+
+}
+.rtl .openerp .oe_form input[type="text"], .rtl .openerp .oe_form input[type="password"], .rtl .openerp .oe_form input[type="file"], .rtl .openerp .oe_form select{
+  height: 33px;
+
+}
+.rtl .openerp .oe_tags{
+  height: 30px !important;
+}
+.rtl .openerp .oe_tags textarea{
+  min-height: 30px !important;
+}
+.rtl .openerp .text-tags .text-remove{
+  top: 5px !important;
+}
+.rtl .text-core .text-wrap .text-arrow{
+  top: 3px !important;
+}
+
 /*--------------------------left menu------------------------------------*/
 .oe_secondary_menus_container ul{
     padding-left: 0px; 
@@ -104,10 +221,12 @@ position: static;
 float: left;
 }
 .rtl .openerp .oe_kanban_view .oe_dropdown_kanban .oe_dropdown_menu {
-    right: 0;
-    left:auto;
+    left: 0;
+    right:auto;
 }
-
+.rtl .openerp .oe_kanban_view .oe_dropdown_kanban{
+  float: left;
+}
 /*--------------------application header-------------------*/
 .rtl .openerp .oe_view_manager table.oe_view_manager_header h2 {
     float: right;
@@ -142,10 +261,6 @@ direction:ltr;
 .openerp ul.oe_form_status li:first-child > .label, .openerp ul.oe_form_status_clickable li:first-child > .label {
   padding-right: 14px;
 }
-.rtl .openerp ul.oe_form_status li .arrow, .rtl .openerp ul.oe_form_status_clickable li .arrow {
-    margin-left: -15px;
-}
-
 
 /**
 view switch manager
@@ -177,6 +292,7 @@ view switch manager
 .openerp ul.oe_form_status li > .arrow span, .openerp ul.oe_form_status_clickable li > .arrow span{
     box-shadow: 1px -1px 2px rgba(255, 255, 255, 0.2), inset 1px -1px 1px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 1px -1px 2px rgba(255, 255, 255, 0.2), inset 1px -1px 1px rgba(0, 0, 0, 0.2);
+
 }
 .navbar-nav>li{
     float: right !important;
@@ -210,14 +326,28 @@ view switch manager
     margin-top: 0px;
     text-align: left;
 }
+.openerp ul.oe_form_status li, .openerp ul.oe_form_status_clickable li{
+  margin-right: -39px;
+  margin-left: 33px;
+  padding-left: -12px;
+}
+.openerp ul.oe_form_status li:last-child, .openerp ul.oe_form_status_clickable li:last-child{
+  margin-left: 0px;
+}
+.openerp ul.oe_form_status li > .arrow, .openerp ul.oe_form_status_clickable li > .arrow{
+  width: 41px;
+  height: 41px;
+  margin-left: -38px;
+  padding-bottom: 13px;
+}
 .openerp ul.oe_form_status li > .arrow span, .openerp ul.oe_form_status_clickable li > .arrow span {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 33px;
+  height: 33px;
   display: inline-block;
   margin-left: 0px !important;
-  margin-right: -12px;
-  margin-top: 3px;
+  margin-right: -14px;
+  margin-top: 6px;
   box-shadow: 1px -1px 2px rgba(255, 255, 255, 0.2), inset 1px -1px 1px rgba(0, 0, 0, 0.2);
   background-color: #dedede;
   background: -moz-linear-gradient(135deg, #dedede, #fcfcfc);
@@ -299,6 +429,7 @@ view switch manager
 .rtl .openerp .oe_form_field_many2one span.oe_m2o_drop_down_button{
   right: auto !important;
   left: 0px;
+  top: 9px;
 }
 
 .rtl .oe_subtotal_footer.oe_right .oe_form_group_cell .oe_form_field_float.oe_form_field_monetary{
@@ -390,4 +521,17 @@ view switch manager
 .rtl .oe_im .oe_im_user .oe_im_user_online{
   right: auto!important;
   left: 11px;
+}
+.rtl button.close{
+  line-height: 18px;
+}
+.oe_radio_input{
+  margin-left: 4px !important;
+}
+.rtl .alert-dismissable .close, .alert-dismissible .close{
+  right: 0px;
+}
+.rtl .openerp .oe_sidebar .oe_dropdown_menu li .oe_sidebar_delete_item{
+  right: auto;
+  left: 4px;
 }
