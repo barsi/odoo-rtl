@@ -46,7 +46,7 @@
                 <attribute name="class"></attribute>     
                 <attribute name="t-att-class">'container ' + lang_direction</attribute>      
             </xpath>
-            <xpath expr="//head/style[@type='text/css']" position="after">
+            <xpath expr="//t[@t-call-assets='report.assets_common']" position="after">
                 <link t-if="lang_direction == 'rtl'" rel="stylesheet" href="/report_rtl/static/src/css/bootstrap-rtl.min.css"/>
                 <link t-if="lang_direction == 'rtl'" rel="stylesheet" href="/report_rtl/static/src/css/rtl.css"/>
                 <style t-if="lang_direction == 'rtl'">

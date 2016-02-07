@@ -86,7 +86,7 @@
 }
 
 .rtl{direction:rtl}
-.rtl *:not(.glyphicon){font-family: 'Droid Arabic Naskh', serif;}
+.rtl *:not(.fa){font-family: 'Droid Arabic Naskh', serif;}
 
 /*
 * reset switch manager fonts
@@ -98,6 +98,9 @@ font-family: "entypoRegular" !important;
 
 .rtl .oe_kanban_action_button{
   line-height: 5px;
+}
+.rtl .oe_kanban_action_button.btn{
+  line-height: 20px;
 }
 .rtl .openerp .oe_left {float: right;margin:0px 0px 0px 8px}
 .rtl .openerp th, .rtl .openerp td {text-align: right;}
@@ -392,10 +395,23 @@ view switch manager
 .rtl .openerp .oe_searchview .oe_searchview_search{
   left: auto !important;
   right: 0;
-  top: 0;
+  top: 2;
   padding-left: 0;
-  padding-right: 5px;
+  padding-right: 3px;
 }
+
+.rtl .openerp .oe_searchview .oe_searchview_facets .oe_searchview_input{
+  padding: 2px 15px 0 0px; 
+}
+
+.openerp .oe_searchview .oe_searchview_facets .oe_searchview_input:first-child{
+  margin-left: auto;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+
+
 .rtl .openerp .oe_searchview .oe_searchview_facets{
   margin-left: 30px;
   margin-right: 20px;
@@ -409,6 +425,9 @@ view switch manager
 .rtl .openerp .oe_searchview_drawer h4:before{
   content: " ◂";
 }
+.rtl .openerp .oe_searchview .oe_searchview_facets .oe_searchview_facet{
+  margin-right: -10px;
+}
 .rtl .openerp .oe_searchview .oe_searchview_facets .oe_searchview_facet .oe_facet_remove{
   right: auto !important;
   left: 3px;
@@ -420,11 +439,10 @@ view switch manager
 .rtl .openerp .oe_searchview .oe_searchview_facets .oe_searchview_facet .oe_facet_values{
   border-radius: 3px 0 0 3px;
   padding-right: 0px;
-  padding-left: 16px;
+  padding-left: 15px;
 }
 .rtl .openerp .oe_searchview .oe_searchview_facets .oe_searchview_facet .oe_facet_value{
   border-left: 0px;
-  border-right: 1px solid #afafb6;
 }
 .rtl .openerp .oe_form_field_many2one span.oe_m2o_drop_down_button{
   right: auto !important;
@@ -534,4 +552,129 @@ view switch manager
 .rtl .openerp .oe_sidebar .oe_dropdown_menu li .oe_sidebar_delete_item{
   right: auto;
   left: 4px;
+}
+
+
+/* ---- modules ----- */
+.rtl .oe_module_vignette .oe_module_icon{
+  float: right;
+}
+
+.rtl .oe_module_icon + .oe_module_desc{
+  padding-left: 0px;
+  padding-right: 85px;
+}
+.rtl .oe_module_desc > button{
+  right: auto;
+  left: 8px;
+}
+.rtl .o_kanban_manage_button_section .o_kanban_manage_toggle_button{
+  text-align: left;
+}
+
+.o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_header .o_kanban_manage_button_section .o_kanban_manage_toggle_button, .o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_header .o_kanban_manage_button_section .o_kanban_manage_toggle_button{
+  text-align: left;
+}
+.text-right{
+  text-align: left;
+}
+.openerp .oe-control-panel .oe-right-toolbar{
+  float: left;
+}
+.fa-chevron-right:before {
+    content: "\f053";
+}
+.fa-chevron-left:before {
+    content: "\f054";
+}
+.fa-caret-down:before {
+    content: "\f0d7";
+}
+.o_kanban_view .o_kanban_record .o_kanban_image{
+  float: right;
+}
+.o_kanban_view .o_kanban_record .o_kanban_image+div{
+  padding-left: 0px;
+  padding-right: 72px;
+}
+.o_kanban_view .o_kanban_record .o_kanban_tags{
+  margin: 0 -8px 8px 0px;
+}
+.openerp .oe_form > :not(.oe_form_nosheet) header > button, .openerp .oe_form > .oe_form_nosheet header > button {
+    margin: 5px 2px;
+}
+.openerp .oe-control-panel .oe-cp-sidebar {
+    display: inline-block;
+    float: left;
+}
+.openerp .oe_button_box{
+  float: left;
+  text-align: left;
+}
+.openerp .oe_formview .oe_button_box .oe_stat_button{
+  text-align: right;
+}
+.oe_radio_input + label{
+  margin-right: 20px;
+}
+
+/*---- chat -----*/
+.o_mail_chat .o_mail_chat_sidebar{
+  float: right;
+}
+.o_mail_chat .o_mail_chat_content{
+  margin-left: 0px;
+}
+.o_mail_chat .o_mail_chat_content .o_mail_thread{
+  padding-right: 10px;
+}
+
+/*---- planner ----*/
+.o_planner_dialog .o_planner_title_block{
+  padding-left: 0px;
+  padding-right: 15px;
+}
+.o_planner_dialog .o_planner_content_wrapper .o_planner_menu{
+  box-shadow: 0px 0px 3px 3px rgba(50,50,50,.3);
+}
+.o_planner_dialog .o_planner_content_wrapper .o_planner_menu>ul{
+  padding-right: 0px;
+}
+.o_planner_dialog .o_planner_content_wrapper .o_planner_menu>ul>li {
+    padding-right: 18px;
+    padding-left: 0px !important;
+    text-indent: 0px;
+}
+.o_planner_dialog .o_planner_content_wrapper .o_planner_menu>ul>li>a{
+  padding-left: 0px !important;
+  padding-right: 18px;
+}
+#PlannerDialog .o_planner_dialog .o_planner_content_wrapper .o_planner_menu>ul>h4>i{
+  margin-left: 10px;
+}
+#PlannerDialog .o_planner_dialog .o_planner_content_wrapper .o_planner_menu>ul>h4{
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-right: -15;
+}
+.fa-angle-right:before {
+    content: "\f104";
+}
+.fa-angle-left:before {
+    content: "\f105";
+}
+.fa-arrow-right:before {
+    content: "\f060";
+}
+.fa-arrow-left:before {
+    content: "\f061";
+}
+.oe_tip_close {
+    padding: 5px 10px 10px 5px !important;
+    margin-top: -15px;
+    margin-left: -15px;
+    margin-right: auto;
+}
+.o_calendar_view{
+  direction: ltr !important
 }

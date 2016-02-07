@@ -21,10 +21,9 @@
 
 {
     'name': 'Report RTL',
-    'version': '1.1',
+    'version': '1.0',
     'author': 'Mohammed Barsi',
     'sequence': 4,
-    'category': 'Advanced Reporting',
     'summary': 'Report RTL (Right to Left) layout',
     'description':
         """
@@ -34,7 +33,7 @@ Adding RTL (Right to Left) Support for Reports.
 This module provides a propper RTL support for Odoo's new report engine.
         """,
     'depends': ['web_rtl', 'report'],
-    'auto_install': False,
+    'auto_install': True,
     'data': [
         'views/layout.xml',
     ],
