@@ -282,9 +282,7 @@ view switch manager
 .oe_systray{
     float: left !important;
 }
-.openerp .oe_title{
-    float: right;
-}
+
 .openerp .oe_form > :not(.oe_form_nosheet) header ul:not(.oe_tooltip_technical):not(.oe_dropdown_menu){
     float: left;
 }
@@ -707,4 +705,24 @@ view switch manager
     -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
     -o-transform: matrix(-1, 0, 0, 1, 0, 0);
     transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.openerp .oe_title {
+    float: right;
+}
+.openerp .oe_avatar + div {
+    margin-right: 5px;
+    margin-left: 0px;
+}
+
+.o_reconciliation .o_reconciliation_line .accounting_view caption {
+    text-align: right;
+    margin-bottom: 25px;
+}
+.o_reconciliation .o_reconciliation_line .accounting_view caption button {
+    float: left;
+    position: relative;
+}
+.o_reconciliation .o_reconciliation_line .accounting_view caption .partner_name {
+    float: right;
 }
