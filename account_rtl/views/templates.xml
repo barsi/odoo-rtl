@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="assets_backend" name="account assets" inherit_id="account.assets_backend">
+            <xpath expr="." position="inside">
+            	<script src="/account_rtl/static/src/js/account.js" type="text/javascript"></script>
+            </xpath>
+        </template>
+	</data>
+</odoo>
