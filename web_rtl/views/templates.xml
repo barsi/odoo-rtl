@@ -6,13 +6,10 @@
             <xpath expr="//html/head/t" position="after">
                 <link t-if="lang_direction == 'rtl'" href="/web_rtl/static/src/css/bootstrap-rtl.min.css" rel="stylesheet"/>
                 <link t-if="lang_direction == 'rtl'" href="/web_rtl/static/src/css/rtl.css" rel="stylesheet"/>
-                
             </xpath>
             <xpath expr="//html" position="before">
                 <t t-set="body_classname" t-value="lang_direction + ' ' + (body_classname or '')"/>
             </xpath>
-            
-            
         </template>
     </data>
 </openerp>
