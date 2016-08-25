@@ -28,15 +28,33 @@ class ir_http(orm.AbstractModel):
     _inherit = 'ir.http'
 
     def _dispatch(self):
-        resp = super(ir_http, self)._dispatch()
-        if request.website:
+        if request.httprequest.method != "GET":
+            return super(ir_http, self)._dispatch()
+        
+        if hasattr(request, 'website'):
             langs = request.website.get_languages_dir()
-            dir = langs.get(request.context['lang'], None)
-            if dir is None:
+            dirr = langs.get(request.context['lang'], None)
+            if dirr is None:
                 request.website._get_languages_dir.clear_cache(request.website)
                 langs = request.website.get_languages_dir()
-                dir = langs.get(request.context['lang'], None)
-                if dir is None:
-                    dir = 'ltr'
-            request.context['lang_dir'] = dir
+                dirr = langs.get(request.context['lang'], None)
+                if dirr is None:
+                    dirr = 'ltr'
+            request.context['lang_dir'] = dirr
+            request.lang_dir = dirr
+            request.website = request.website.with_context(request.context)
+            return super(ir_http, self)._dispatch()
+
+        else:
+            resp = super(ir_http, self)._dispatch()
+            cook_lang = request.httprequest.cookies.get('website_lang')
+            cook_lang = getattr(request, 'lang', False) or (cook_lang or 'en_US')
+            ws = request.registry['website'].get_current_website(request.cr, request.uid, context=request.context)
+            langs = ws.get_languages_dir()
+            request.lang_dir = langs.get(cook_lang)
+            request.context['lang_dir'] = request.lang_dir
+            return super(ir_http, self)._dispatch()
+
+        resp = super(ir_http, self)._dispatch()
+
         return resp
