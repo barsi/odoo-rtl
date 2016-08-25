@@ -1,8 +1,8 @@
 # Odoo RTL (Right to left) Project
 
-**version 9.0**
+**version 9.0 community**
 
-This project developed as a set of modules to provide Right to left support for Odoo (formely known as OpenERP).
+This project developed as a set of modules to provide Right to left support for Odoo v9.0 community edition (formely known as OpenERP).
 
 the project contains 3 main modules that cover the three main features in odoo that require RTL support:
 
@@ -31,14 +31,15 @@ the project contains 3 main modules that cover the three main features in odoo t
 2. go to website, and select the target language.
 
 
+## For Odoo Enterprise and POS POSBox
+There is a seperate version for Odoo enterprise and custom POSBox that support RTL licensed by **[Logicware](http://logicware.sa)** contact them for details.
+
+
 ## Contributions and Support
 1. you can post an issue (for bugs and new features).
 2. create a pull request.
 3. or by email (if you dont have a github account).
 
-
-## For OpenERP 7.0 RTL
-we developed an RTL support for V7.0 reports, go **[to this link.](https://github.com/barsi/openerp-rtl)**
 
 
 ### License
