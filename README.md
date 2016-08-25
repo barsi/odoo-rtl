@@ -1,5 +1,7 @@
 # Odoo RTL (Right to left) Project
 
+**version 9.0**
+
 This project developed as a set of modules to provide Right to left support for Odoo (formely known as OpenERP).
 
 the project contains 3 main modules that cover the three main features in odoo that require RTL support:
@@ -11,7 +13,7 @@ the project contains 3 main modules that cover the three main features in odoo t
 ## Installation
 
 #### For Backend UI
-1. [download](https://github.com/barsi/odoo-rtl/archive/master.zip) and extract the modules in addons folder.
+1. [download](https://github.com/barsi/odoo-rtl/archive/9.0.zip) and extract the modules in addons folder.
 2. restart odoo server.
 3. go to settings => update modules list.
 4. go to settings => language and make sure your target language (e.g. arabic) is Right to left direction.
@@ -38,8 +40,6 @@ the project contains 3 main modules that cover the three main features in odoo t
 ## For OpenERP 7.0 RTL
 we developed an RTL support for V7.0 reports, go **[to this link.](https://github.com/barsi/openerp-rtl)**
 
-### Credits
-Thanks go to Obay Albadri, he started RTL css for Version 7.0, we continue adding above it.
 
 ### License
 This project is licensed under [AGPL v3](http://www.gnu.org/licenses/agpl-3.0.html) (the same as odoo).

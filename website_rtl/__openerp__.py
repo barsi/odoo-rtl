@@ -22,15 +22,15 @@
 
 {
     'name': 'Website RTL',
-    'version': '1.0',
+    'version': '2.0',
     'author': 'Mohammed Barsi',
     'sequence': 4,
     'category': 'Website',
     'summary': 'Website RTL(Right to Left) layout',
     'description':
         """
-Adding RTL(Right to Left) Support for Odoo's website module.
-============================================================
+Adding RTL (Right to Left) Support for Odoo's website module.
+==============================================================
 
 This module provides a propper RTL support for Odoo.
         """,
