@@ -216,6 +216,10 @@ padding: 0px 2px;
 }
 
 /*------------------------Kanban View--------------------*/
+.o_kanban_view .o_kanban_record .o_kanban_button > button, .o_kanban_view .o_kanban_record .o_kanban_button > a{
+  right: auto;
+  left: 8px;
+}
 .rtl .openerp .oe_kanban_view .oe_kanban_group_title_vertical{
 direction:ltr
 }
@@ -682,6 +686,9 @@ view switch manager
 .openerp .oe_formview .oe_avatar+.oe_title {
     padding-right: 10px;
     padding-left: 0px;
+}
+.openerp .oe_formview .oe_button_box + .oe_title, .openerp .oe_formview .oe_button_box + .oe_avatar + .oe_title{
+  width:345px;
 }
 
 /*-----popover------*/
