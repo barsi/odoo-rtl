@@ -733,3 +733,6 @@ view switch manager
 .o_reconciliation .o_reconciliation_line .accounting_view caption .partner_name {
     float: right;
 }
+.openerp .oe_stat_button > div{
+  text-align: right;
+}
