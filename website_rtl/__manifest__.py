@@ -26,7 +26,7 @@
     'author': 'Mohammed Barsi',
     'sequence': 4,
     'category': 'Website',
-    'summary': 'Website RTL(Right to Left) layout',
+    'summary': 'Website RTL (Right to Left) layout',
     'description':
         """
 Adding RTL (Right to Left) Support for Odoo's website module.

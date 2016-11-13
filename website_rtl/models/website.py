@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo RTL support
-#    Copyright (C) 2014 Mohammed Barsi.
+#    Copyright (C) 2016 Mohammed Barsi.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,23 +20,26 @@
 ##############################################################################
 
 
-from openerp.osv import orm, fields
-from openerp.http import request
+from odoo import models, fields, api
+from odoo.http import request
 
-import openerp
+import odoo
 
 
-class Website(orm.Model):
+class Website(models.Model):
     _inherit = 'website'
 
-    @openerp.tools.ormcache(skiparg=3)
-    def _get_languages_dir(self, cr, uid, id, context=None):
-        website = self.browse(cr, uid, id)
+    @api.model
+    @odoo.tools.ormcache()
+    def _get_languages_dir(self):
+        website = self
         return dict([(lg.code, lg.direction) for lg in website.language_ids])
 
+    @api.multi
     def get_languages_dir(self, cr, uid, ids, context=None):
-        return self._get_languages_dir(cr, uid, ids[0])
+        return self._get_languages_dir()
 
-    def write(self, cr, uid, ids, vals, context=None):
-        self._get_languages_dir.clear_cache(self)
-        return super(Website, self).write(cr, uid, ids, vals, context)
+    @api.multi
+    def write(self, vals):
+        self._get_languages_dir.clear_cache()
+        return super(Website, self).write(vals)

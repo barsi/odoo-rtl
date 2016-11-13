@@ -20,44 +20,25 @@
 ##############################################################################
 
 
-from openerp.osv import orm
-from openerp import SUPERUSER_ID
+from odoo import models, fields, api
+from odoo import SUPERUSER_ID
 
-from openerp.http import request
+from odoo.http import request
+from odoo.addons.base.ir.ir_qweb.qweb import QWeb
 
 
-class QWeb(orm.AbstractModel):
+class IrQWeb(models.AbstractModel, QWeb):
     _inherit = 'ir.qweb'
 
-    def render(self, cr, uid, id_or_xml_id, qwebcontext=None, loader=None, context=None):
-        context = context or {}
-        if qwebcontext and qwebcontext.get('lang_direction', None):
-            
-            return super(QWeb, self).render(
-                cr,
-                uid,
-                id_or_xml_id,
-                qwebcontext=qwebcontext,
-                loader=loader,
-                context=context)
-        lang_obj = self.pool.get('res.lang')
-        lang = context.get('lang', None)
-        if not lang:
-            if qwebcontext.get('lang', None):
-                lang = qwebcontext.get('lang')
-            elif uid:
-                user = self.pool.get('res.users').browse(cr, uid, uid, context=context)
-                lang = user.partner_id.lang
-            else:
-                lang = 'en_US'
-        directions = lang_obj.get_languages_dir(cr, uid, [], context=context)
+    @api.model
+    def render(self, id_or_xml_id, values=None, **options):
+        values = values or {}
+        context = dict(self.env.context, **options)
+        if 'lang_direction' in values:
+            return super(IrQWeb, self).render(id_or_xml_id, values=values, **options)
+        Language = self.env['res.lang']
+        lang = context.get('lang', 'en_US')
+        directions = Language.get_languages_dir()
         direction = directions.get(lang, 'ltr')
-        qwebcontext['lang_direction'] = qwebcontext.get('lang_direction', None) or direction
-        
-        return super(QWeb, self).render(
-            cr,
-            uid,
-            id_or_xml_id,
-            qwebcontext=qwebcontext,
-            loader=loader,
-            context=context)
+        values['lang_direction'] = direction
+        return super(IrQWeb, self).render(id_or_xml_id, values=values, **options)

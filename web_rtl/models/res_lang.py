@@ -20,21 +20,23 @@
 ##############################################################################
 
 
-from openerp.osv import orm
-import openerp
+from odoo import models, fields, api
+import odoo
 
-class res_lang(orm.Model):
+class Language(models.Model):
     _inherit = 'res.lang'
 
-    @openerp.tools.ormcache(skiparg=3)
-    def _get_languages_dir(self, cr, uid, id, context=None):
-        ids = self.search(cr, uid, [('active', '=', True)], context=context)
-        langs = self.browse(cr, uid, ids, context=context)
+    @api.model
+    @odoo.tools.ormcache(skiparg=1)
+    def _get_languages_dir(self):
+        langs = self.search([('active', '=', True)])
         return dict([(lg.code, lg.direction) for lg in langs])
 
-    def get_languages_dir(self, cr, uid, ids, context=None):
-        return self._get_languages_dir(cr, uid, ids)
+    @api.multi
+    def get_languages_dir(self):
+        return self._get_languages_dir()
 
-    def write(self, cr, uid, ids, vals, context=None):
+    @api.multi
+    def write(self, vals):
         self._get_languages_dir.clear_cache(self)
-        return super(res_lang, self).write(cr, uid, ids, vals, context)
+        return super(Language, self).write(vals)
