@@ -20,5 +20,5 @@
 ##############################################################################
 
 
-import models
-import controllers
+from . import models
+from . import controllers
