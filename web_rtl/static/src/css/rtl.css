@@ -797,3 +797,6 @@ body .o_form_view .o_group.o_inner_group.oe_subtotal_footer{
 .o_form_view .oe_avatar{
   float: right;
 }
+.o_control_panel .o_cp_right .o_cp_pager{
+  margin: auto auto auto 0;
+}
