@@ -800,3 +800,10 @@ body .o_form_view .o_group.o_inner_group.oe_subtotal_footer{
 .o_control_panel .o_cp_right .o_cp_pager{
   margin: auto auto auto 0;
 }
+.o_searchview .o_searchview_facet .o_facet_remove{
+  left: 0px;
+  right: auto;
+}
+.o_searchview .o_searchview_facet .o_facet_values {
+    padding: 0 5px 0 18px;
+}
