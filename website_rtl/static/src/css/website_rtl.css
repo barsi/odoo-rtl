@@ -16,4 +16,7 @@
     .navbar-nav.navbar-right:last-child{
         margin-left: auto;
     }
+    .rtl .pull-left{
+        float: right !important;
+    }
 }

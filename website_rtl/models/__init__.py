@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo RTL support
-#    Copyright (C) 2014 Mohammed Barsi.
+#    Copyright (C) 2016 Mohammed Barsi.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,5 +20,4 @@
 ##############################################################################
 
 
-import ir_http
-import website
+from . import website

@@ -36,10 +36,10 @@ class Website(models.Model):
         return dict([(lg.code, lg.direction) for lg in website.language_ids])
 
     @api.multi
-    def get_languages_dir(self, cr, uid, ids, context=None):
+    def get_languages_dir(self):
         return self._get_languages_dir()
 
     @api.multi
     def write(self, vals):
-        self._get_languages_dir.clear_cache()
+        self._get_languages_dir.clear_cache(self)
         return super(Website, self).write(vals)
