@@ -535,3 +535,9 @@ view switch manager
   right: auto;
   left: 4px;
 }
+.rtl .openerp .oe_list.oe_list_editable.oe_editing img.oe_input_icon.oe_datepicker_trigger {
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    margin: 0px;
+}
