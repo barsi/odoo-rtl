@@ -2,14 +2,7 @@
 
 **version 10.0 community**
 
-**beta version (need further css adjustments)**
-
 This project developed as a set of modules to provide Right to left support for Odoo v10.0 community edition (formely known as OpenERP).
-
-
-## For Odoo Enterprise and Point of sale POSBox
-There is a seperate version for Odoo enterprise and custom POSBox that support RTL licensed by **[Logicware](http://logicware.sa)** contact them for details.
-
 
 the project contains 3 main modules that cover the three main features in odoo that require RTL support:
 
@@ -40,8 +33,8 @@ the project contains 3 main modules that cover the three main features in odoo t
 
 ## Contributions and Support
 1. you can post an issue (for bugs and new features).
-2. create a pull request.
-3. or by email (if you dont have a github account).
+2. create pull request.
+3. or by email (if you dont have github account).
 
 
 ### License
