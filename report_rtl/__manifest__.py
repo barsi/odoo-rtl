@@ -32,7 +32,7 @@ Adding RTL (Right to Left) Support for Reports.
 
 This module provides a propper RTL support for Odoo's new report engine.
         """,
-    'depends': ['web_rtl', 'report'],
+    'depends': ['web_rtl',],
     'auto_install': True,
     'data': [
         'views/layout.xml',

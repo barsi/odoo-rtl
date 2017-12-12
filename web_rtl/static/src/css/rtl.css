@@ -807,3 +807,82 @@ body .o_form_view .o_group.o_inner_group.oe_subtotal_footer{
 .o_searchview .o_searchview_facet .o_facet_values {
     padding: 0 5px 0 18px;
 }
+
+
+/*---------------------------------------*/
+
+.o_field_widget .o_input_dropdown .o_dropdown_button {
+    top: 6px;
+    left: 4px;
+    right: unset;
+}
+.o_form_view .o_group .o_td_label + td {
+    padding: 2px 8px 2px 40px;
+}
+.o_form_view .o_group .o_td_label {
+    border-right: 0px solid #ddd;
+    border-right-width: 0px;
+    border-left: 1px solid #ddd;
+    border-left-width: 1px;
+}
+.o_list_view .o_data_row.o_selected_row > .o_data_cell:not(.o_readonly_modifier) .o_input_dropdown > .o_dropdown_button, .o_list_view .o_data_row.o_selected_row > .o_data_cell:not(.o_readonly_modifier) .o_datepicker > .o_dropdown_button, .o_list_view .o_data_row.o_selected_row > .o_data_cell:not(.o_readonly_modifier) .o_input_dropdown .o_datepicker_button, .o_list_view .o_data_row.o_selected_row > .o_data_cell:not(.o_readonly_modifier) .o_datepicker .o_datepicker_button {
+    top: 25%;
+    left: 5px;
+    right: auto;
+}
+.o_web_client > .o_main .o_sub_menu .o_sub_menu_content .oe_secondary_submenu > li > a {
+    padding: 4px 18px 4px 4px;
+}
+.o_web_client > .o_main .o_sub_menu .o_sub_menu_content .oe_secondary_submenu .oe_menu_toggler:before {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    content: "&darr";
+    opacity: 0.5;
+    text-indent: -99999px;
+    vertical-align: top;
+    margin-left: unset;
+    margin-top: 4px;
+    margin-right: 4px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: unset;
+}
+
+.o_web_client > .o_main .o_sub_menu .o_sub_menu_content .oe_secondary_submenu .oe_menu_opened{
+  font-weight: bolder;
+}
+.o_web_client > .o_main .o_sub_menu .o_sub_menu_content .oe_secondary_submenu .oe_menu_opened:before{
+      margin-top: 6px;
+    margin-left: 0px;
+    margin-right: 4px;
+    border-left: 4px solid #4c4c4c;
+    border-right: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid #4c4c4c;
+}
+.o_search_options input[type="text"], .o_search_options select{
+  font-size: 11px;
+}
+.o_search_options .o_filters_menu .o_searchview_extended_delete_prop {
+    right: auto;
+    left: -18px;
+}
+.o_search_options .o_filters_menu .o_filter_condition .o_or_filter {
+
+    right: -18px;
+    left: auto;
+}
+.o_control_panel > .o_cp_right > .o_cp_switch_buttons > .btn:first-child {
+    margin-left: 0px;
+    margin-right: 16px;
+}
+.o_planner_dialog > .modal-dialog > .modal-content > .modal-body > .o_planner_menu {
+    float: right;
+    border-right: 0px;
+    border-left: 1px solid #e6e6e6;
+}
+.oe_module_action .pull-right {
+    left: 8px;
+    right: auto;
+}

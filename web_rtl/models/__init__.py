@@ -20,5 +20,5 @@
 ##############################################################################
 
 
-import ir_qweb
-import res_lang
+from . import ir_qweb
+from . import res_lang
