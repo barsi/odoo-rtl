@@ -1,8 +1,8 @@
 # Odoo RTL (Right to left) Project
 
-**version 10.0 community**
+**version 11.0 community**
 
-This project developed as a set of modules to provide Right to left support for Odoo v10.0 community edition (formely known as OpenERP).
+This project developed as a set of modules to provide Right to left support for Odoo v11.0 community edition (formely known as OpenERP).
 
 the project contains 3 main modules that cover the three main features in odoo that require RTL support:
 
@@ -13,7 +13,7 @@ the project contains 3 main modules that cover the three main features in odoo t
 ## Installation
 
 #### For Backend UI
-1. [download](https://github.com/barsi/odoo-rtl/archive/10.0.zip) and extract the modules in addons folder.
+1. [download](https://github.com/barsi/odoo-rtl/archive/11.0.zip) and extract the modules in addons folder.
 2. restart odoo server.
 3. go to settings => update modules list.
 4. go to settings => language and make sure your target language (e.g. arabic) is Right to left direction.
@@ -24,7 +24,6 @@ the project contains 3 main modules that cover the three main features in odoo t
 1. Install Report RTL.
 2. change your language into RTL language.
 3. select any report and print it.
-4. if your report still in LTR, make sure that the report is not depends on Partner's language (e.g. Invoice Reports, Sale report). or review steps of backend UI.
 
 #### For Frontend
 1. Install Website RTL
