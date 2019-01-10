@@ -1,5 +1,7 @@
 # Odoo RTL (Right to left) Project
 
+## For Version 12.0+, Odoo added support for RTL, please refere to offecial [Odoo Installation](https://www.odoo.com/documentation/12.0/setup/install.html) to learn how to enable RTL.
+
 **version 11.0 community**
 
 This project developed as a set of modules to provide Right to left support for Odoo v11.0 community edition (formely known as OpenERP).
